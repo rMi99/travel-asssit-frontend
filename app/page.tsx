@@ -41,7 +41,7 @@ export default function Home() {
       <Gallery />
       <NewsEvents />
       <Footer />
-      <ChanptBot />
+      <ChatBot />
     </main>
   )
 }
