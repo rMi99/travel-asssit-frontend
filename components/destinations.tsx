@@ -10,42 +10,42 @@ export default function Destinations() {
       id: 1,
       name: "Galle Fort",
       location: "Galle",
-      image: "build/assets/destination_1_1-D0HJvnt5.jpg",
+      image: "images/assets/destination_1_1-D0HJvnt5.jpg",
       description: "A UNESCO World Heritage site with colonial architecture and ocean views.",
     },
     {
       id: 2,
       name: "Hiyare Reservoir",
       location: "Galle",
-      image: "build/assets/destination_1_2-C6uN8JgU.jpg",
+      image: "images/assets/destination_1_2-C6uN8JgU.jpg",
       description: "A serene nature reserve with diverse wildlife and hiking trails.",
     },
     {
       id: 3,
       name: "Weligama Beach",
       location: "Weligama",
-      image: "build/assets/destination_1_3-Cy5LsGbf.jpg",
+      image: "images/assets/destination_1_3-Cy5LsGbf.jpg",
       description: "Perfect for surfing with gentle waves ideal for beginners.",
     },
     {
       id: 4,
       name: "Yala Safari",
       location: "Hambantota",
-      image: "build/assets/destination_1_4-CWH4gRZO.jpg",
+      image: "images/assets/destination_1_4-CWH4gRZO.jpg",
       description: "Sri Lanka's premier wildlife sanctuary with leopards and elephants.",
     },
     {
       id: 5,
       name: "Stilt Fishing",
       location: "Koggala",
-      image: "build/assets/destination_1_5-wfG2LA8W.jpg",
+      image: "images/assets/destination_1_5-wfG2LA8W.jpg",
       description: "Experience the traditional fishing method unique to Sri Lanka.",
     },
     {
       id: 6,
       name: "Mulkirigala Temple",
       location: "Hambantota",
-      image: "build/assets/destination_1_6-BUFU524s.jpg",
+      image: "images/assets/destination_1_6-BUFU524s.jpg",
       description: "Ancient rock temple with stunning panoramic views.",
     },
   ]
@@ -70,9 +70,9 @@ export default function Destinations() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <span className="text-[#1ca8cb] font-medium">Top Destinations</span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">Top Travel Spots in Southern Province</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">Top Travel Spots in Sri Lanka</h2>
           <p className="max-w-2xl mx-auto text-gray-600">
-            Discover the most beautiful and captivating locations across the southern coast of Sri Lanka, from historic
+            Discover the most beautiful and captivating locations across the Sri Lanka, from historic
             forts to pristine beaches.
           </p>
         </div>

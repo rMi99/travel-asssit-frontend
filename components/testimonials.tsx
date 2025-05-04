@@ -15,7 +15,7 @@ export default function Testimonials() {
       location: "United Kingdom",
       image: "/placeholder.svg?height=100&width=100",
       rating: 5,
-      text: "Our trip to Southern Sri Lanka was absolutely magical! The beaches were pristine, the wildlife encounters were unforgettable, and the local guides were incredibly knowledgeable. We'll definitely be back!",
+      text: "Our trip to Sri Lanka was absolutely magical! The beaches were pristine, the wildlife encounters were unforgettable, and the local guides were incredibly knowledgeable. We'll definitely be back!",
     },
     {
       id: 2,
@@ -31,7 +31,7 @@ export default function Testimonials() {
       location: "Spain",
       image: "/placeholder.svg?height=100&width=100",
       rating: 5,
-      text: "From the moment we arrived, we were treated like family. The cultural experiences were authentic, and the food was incredible. The beaches of Southern Sri Lanka are some of the most beautiful I've ever seen.",
+      text: "From the moment we arrived, we were treated like family. The cultural experiences were authentic, and the food was incredible. The beaches of Sri Lanka are some of the most beautiful I've ever seen.",
     },
   ]
 
@@ -50,7 +50,7 @@ export default function Testimonials() {
           <span className="text-teal-600 font-medium">Testimonials</span>
           <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">What Our Travelers Say</h2>
           <p className="max-w-2xl mx-auto text-gray-600">
-            Hear from travelers who have experienced the magic of Southern Sri Lanka with us.
+            Hear from travelers who have experienced the magic of Sri Lanka with us.
           </p>
         </div>
 

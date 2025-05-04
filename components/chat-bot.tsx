@@ -128,7 +128,7 @@ export default function ChatBot() {
       if (chatBodyRef.current && !chatBodyRef.current.hasChildNodes()) {
         appendMessage(
           "Bot",
-          "Hello! I'm Sam, your travel assistant. How can I help you plan your trip to Southern Sri Lanka?",
+          "Hello! I'm Sirimal, your travel assistant. How can I help you plan your trip to  Sri Lanka?",
           true,
         )
       }

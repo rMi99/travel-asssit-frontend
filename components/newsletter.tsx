@@ -36,7 +36,7 @@ export default function Newsletter() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Stay Updated with Travel Inspiration</h2>
             <p className="mb-8">
               Subscribe to our newsletter for exclusive travel tips, special offers, and updates on the best experiences
-              in Southern Sri Lanka.
+              in Sri Lanka.
             </p>
 
             <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-4 max-w-xl mx-auto">

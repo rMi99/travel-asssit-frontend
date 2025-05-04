@@ -6,10 +6,9 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Southern Sri Lanka - Ruhunu Tourist Bureau",
+  title: " Sri Lanka Travel - With Assist",
   description:
-    "Discover the beauty of Southern Sri Lanka with Ruhunu Tourist Bureau. Explore pristine beaches, vibrant wildlife, historic landmarks, and authentic local culture in the heart of the Ruhuna region. Plan your perfect getaway today!",
-    generator: 'v0.dev'
+    "Discover the beauty of  Sri Lanka Travel with With Assist. Explore pristine beaches, vibrant wildlife, historic landmarks, and authentic local culture in the heart of the Ruhuna region. Plan your perfect getaway today!"
 }
 
 export default function RootLayout({

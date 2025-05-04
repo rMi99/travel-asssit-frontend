@@ -9,13 +9,13 @@ export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
 
   const images = [
-    { id: 1, src: "build/assets/gallery_1_1-CjmIc0wF.jpg", alt: "Sambur deer" },
-    { id: 2, src: "build/assets/gallery_1_2-F67AEYlP.jpg", alt: "Beach sunset" },
-    { id: 3, src: "build/assets/gallery_1_3-lt8hIPRV.jpg", alt: "Coastal view" },
-    { id: 4, src: "build/assets/gallery_1_4-BXAiZie1.jpg", alt: "Hummanaya" },
-    { id: 5, src: "build/assets/gallery_1_5-DT1Bs6Qw.jpg", alt: "Temple view" },
-    { id: 6, src: "build/assets/gallery_1_6-jTzhHjfG.jpg", alt: "Wildlife" },
-    { id: 7, src: "build/assets/gallery_1_7-BdUeHkLF.jpg", alt: "Beach scene" },
+    { id: 1, src: "images/assets/gallery_1_1-CjmIc0wF.jpg", alt: "Sambur deer" },
+    { id: 2, src: "images/assets/gallery_1_2-F67AEYlP.jpg", alt: "Beach sunset" },
+    { id: 3, src: "images/assets/gallery_1_3-lt8hIPRV.jpg", alt: "Coastal view" },
+    { id: 4, src: "images/assets/gallery_1_4-BXAiZie1.jpg", alt: "Hummanaya" },
+    { id: 5, src: "images/assets/gallery_1_5-DT1Bs6Qw.jpg", alt: "Temple view" },
+    { id: 6, src: "images/assets/gallery_1_6-jTzhHjfG.jpg", alt: "Wildlife" },
+    { id: 7, src: "images/assets/gallery_1_7-BdUeHkLF.jpg", alt: "Beach scene" },
   ]
 
   return (

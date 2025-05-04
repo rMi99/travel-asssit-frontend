@@ -30,7 +30,7 @@ export default function Accommodations() {
     <section
       id="accommodations"
       className="py-20 bg-cover bg-center relative"
-      style={{ backgroundImage: "url('build/assets/tour_bg_1-B30_Usb2.jpg')" }}
+      style={{ backgroundImage: "url('images/assets/tour_bg_1-B30_Usb2.jpg')" }}
     >
       <div className="absolute inset-0 bg-black/40" />
       <div className="container mx-auto px-4 relative z-10">
@@ -39,7 +39,7 @@ export default function Accommodations() {
           <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4 text-white">Book Holiday Bungalows</h2>
           <p className="max-w-2xl mx-auto text-white/80 mb-8">
             Experience the comfort and luxury of our carefully selected holiday bungalows, offering the perfect base for
-            your southern Sri Lanka adventure.
+            your  Sri Lanka adventure.
           </p>
 
           <a

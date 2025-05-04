@@ -20,7 +20,7 @@ export default function About() {
               <div className="space-y-4">
                 <div className="rounded-lg overflow-hidden shadow-lg">
                   <Image
-                    src="build/assets/about_1_1-nSYwzD9I.jpg"
+                    src="images/assets/about_1_1-nSYwzD9I.jpg"
                     alt="About Sri Lanka"
                     width={400}
                     height={300}
@@ -29,7 +29,7 @@ export default function About() {
                 </div>
                 <div className="rounded-lg overflow-hidden shadow-lg">
                   <Image
-                    src="build/assets/about_1_2-DiUHa9l5.jpg"
+                    src="images/assets/about_1_2-DiUHa9l5.jpg"
                     alt="Marine life"
                     width={400}
                     height={300}
@@ -40,7 +40,7 @@ export default function About() {
               <div className="pt-8">
                 <div className="rounded-lg overflow-hidden shadow-lg">
                   <Image
-                    src="build/assets/about_1_3-C1N6LAxI.jpg"
+                    src="images/assets/about_1_3-C1N6LAxI.jpg"
                     alt="Yala"
                     width={400}
                     height={600}
@@ -60,7 +60,7 @@ export default function About() {
             <span className="text-[#1ca8cb] font-medium">Discover the Magic of</span>
             <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-6">Down South</h2>
             <p className="text-gray-600 mb-8">
-              Explore the unspoiled beauty of Sri Lanka's southern coast, a region rich with breathtaking landscapes,
+              Explore the unspoiled beauty of Sri Lanka's  coast, a region rich with breathtaking landscapes,
               vibrant wildlife, and cultural heritage. Whether you're seeking tranquil beaches, lush greenery, or
               unforgettable adventures, the south offers a perfect escape for every traveler.
             </p>
@@ -73,7 +73,7 @@ export default function About() {
                 <div>
                   <h3 className="text-lg font-bold mb-1">Exclusive Experiences</h3>
                   <p className="text-gray-600">
-                    From surfing in Weligama's pristine waters to exploring the historic Galle Fort, the southern coast
+                    From surfing in Weligama's pristine waters to exploring the historic Galle Fort, the  coast
                     promises unique and personalized adventures tailored to your interests.
                   </p>
                 </div>

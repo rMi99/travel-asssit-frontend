@@ -10,9 +10,9 @@ export default function Hero() {
   const slides = [
     {
       title: "Sri Lanka's Coastal Gem of Heritage and Serenity",
-      subtitle: "Discover Southern Province",
+      subtitle: "Discover Province",
       description:
-        "Explore pristine beaches, vibrant wildlife, and cultural heritage in the heart of Southern Sri Lanka.",
+        "Explore pristine beaches, vibrant wildlife, and cultural heritage in the heart of Sri Lanka.",
     },
     {
       title: "Unforgettable Adventures Await",

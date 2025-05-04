@@ -13,14 +13,14 @@ export default function Footer() {
             <Link href="/" className="inline-block mb-6">
               <Image
                 src="https://southernsrilanka.lk/build/assets/logo3-DJHSihqR.png"
-                alt="Southern Sri Lanka"
+                alt=" Sri Lanka"
                 width={160}
                 height={40}
                 className="h-10 w-auto"
               />
             </Link>
             <p className="text-gray-400 mb-6">
-              🌴 Discover the Magic of Sri Lanka's Southern Province! Embark on an unforgettable journey to a land of
+              🌴 Discover the Magic of Sri Lanka's ! Embark on an unforgettable journey to a land of
               hidden treasures, pristine beaches, and vibrant culture!
             </p>
             <div className="flex space-x-4">
@@ -138,21 +138,21 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin className="w-5 h-5 text-[#1ca8cb] mt-1 mr-3 flex-shrink-0" />
-                <span className="text-gray-400">No.153 "B", S.H.Dahanayaka Mawatha, Galle</span>
+                <span className="text-gray-400">No.1 , World Trade Center, Colombo 7.</span>
               </li>
               <li className="flex items-center">
                 <Phone className="w-5 h-5 text-[#1ca8cb] mr-3 flex-shrink-0" />
-                <a href="tel:+94912224072" className="text-gray-400 hover:text-[#1ca8cb] transition-colors">
-                  +94 91 222 4072
+                <a href="tel:+94754165700" className="text-gray-400 hover:text-[#1ca8cb] transition-colors">
+                  +94 75 416 5700
                 </a>
               </li>
               <li className="flex items-center">
                 <Mail className="w-5 h-5 text-[#1ca8cb] mr-3 flex-shrink-0" />
                 <a
-                  href="mailto:info@southernsrilanka.lk"
+                  href="mailto:info@travel.lk"
                   className="text-gray-400 hover:text-[#1ca8cb] transition-colors"
                 >
-                  info@southernsrilanka.lk
+                  info@travel.lk
                 </a>
               </li>
             </ul>
@@ -161,7 +161,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-12 py-8 text-center">
           <p className="text-gray-400">
-            Copyright &copy; {new Date().getFullYear()} | Southern Sri Lanka - Ruhunu Tourist Bureau
+            Copyright &copy; {new Date().getFullYear()} | Sri Lanka - With Assist
           </p>
         </div>
       </div>

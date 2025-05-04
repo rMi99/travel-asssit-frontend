@@ -34,7 +34,7 @@ export default function Navbar({ scrolled }: NavbarProps) {
         <Link href="/" className="flex items-center">
           <Image
             src="https://southernsrilanka.lk/build/assets/logo3-DJHSihqR.png"
-            alt="Southern Sri Lanka"
+            alt="Sri Lanka"
             width={160}
             height={40}
             className="h-10 w-auto"
