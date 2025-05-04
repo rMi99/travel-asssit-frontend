@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Aspect ratio utility */
+.aspect-w-4 {
+  position: relative;
+  padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
+}
+
+.aspect-h-3 {
+  --tw-aspect-h: 3;
+}
+
+.aspect-w-4 {
+  --tw-aspect-w: 4;
+}
+
+.aspect-w-4 > * {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* Chat message styles */
+.message {
+  margin-bottom: 12px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.user-message {
+  background-color: #1ca8cb;
+  color: white;
+  margin-left: auto;
+  border-bottom-right-radius: 0;
+}
+
+.bot-message {
+  background-color: #f0f0f0;
+  color: #333;
+  margin-right: auto;
+  border-bottom-left-radius: 0;
+}
+
+/* Feedback buttons styles */
+.feedback-buttons {
+  margin-top: 6px;
+  display: flex;
+  gap: 8px;
+}
+
+.feedback-buttons button {
+  font-size: 12px;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.helpful {
+  background-color: #28a745;
+  color: white;
+}
+
+.helpful:hover {
+  background-color: #218838;
+}
+
+.not-helpful {
+  background-color: #dc3545;
+  color: white;
+}
+
+.not-helpful:hover {
+  background-color: #c82333;
+}
+
+.feedback-thanks {
+  color: #28a745;
+  font-size: 12px;
+  display: block;
+  margin-top: 6px;
+}
