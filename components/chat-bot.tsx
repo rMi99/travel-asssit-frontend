@@ -77,7 +77,7 @@ export default function ChatBot() {
     appendMessage("Bot", "Typing...", true)
 
     try {
-      const res = await fetch("http://192.168.8.105:5000/chat", {
+      const res = await fetch("http://api-travel.duckdns.org/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: userMessage }),
