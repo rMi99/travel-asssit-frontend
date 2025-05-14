@@ -21,98 +21,117 @@ export default function ChatBot() {
     chatBodyRef.current.scrollTop = chatBodyRef.current.scrollHeight
   }
 
-  const addFeedbackButtons = (botMsgText: string) => {
+  const addFeedbackButtons = (userMessage: string, botMsgText: string, predictedIntent : string) => {
     if (!chatBodyRef.current) return
-
+  
     const msgDiv = document.createElement("div")
     msgDiv.className = "message bot-message"
     msgDiv.innerHTML = `<strong>Bot:</strong> ${botMsgText}`
-
+  
     const feedback = document.createElement("div")
     feedback.className = "feedback-buttons"
-
+  
     const yesBtn = document.createElement("button")
     yesBtn.textContent = "👍 Helpful"
     yesBtn.className = "helpful"
     yesBtn.onclick = () => {
-      sendFeedback(botMsgText, true)
+      sendFeedback({
+        user_message: userMessage,
+        bot_reply: botMsgText,
+        helpful: true,
+        intent_tag: predictedIntent
+      })
       feedback.innerHTML = '<span class="feedback-thanks">Thanks for your feedback!</span>'
     }
-
+  
     const noBtn = document.createElement("button")
     noBtn.textContent = "👎 Not Helpful"
     noBtn.className = "not-helpful"
     noBtn.onclick = () => {
-      sendFeedback(botMsgText, false)
+      sendFeedback({
+        user_message: userMessage,
+        bot_reply: botMsgText,
+        helpful: false,
+        intent_tag: predictedIntent
+      })
       feedback.innerHTML = '<span class="feedback-thanks">Thanks for your feedback!</span>'
     }
-
+  
     feedback.appendChild(yesBtn)
     feedback.appendChild(noBtn)
     msgDiv.appendChild(feedback)
     chatBodyRef.current.appendChild(msgDiv)
     chatBodyRef.current.scrollTop = chatBodyRef.current.scrollHeight
   }
+  
 
-  const sendFeedback = (message: string, helpful: boolean) => {
-    // Note: The backend doesn't have a /feedback endpoint yet
-    console.log(`Feedback for message "${message}": ${helpful ? "Helpful" : "Not helpful"}`)
-
-    // Uncomment this when the feedback endpoint is implemented on the backend
-    // try {
-    //   fetch(`http://192.168.8.105:5000/feedback?msg=${encodeURIComponent(message)}&helpful=${helpful}`)
-    //     .then(() => console.log("Feedback sent successfully"))
-    //     .catch((err) => console.error("Error sending feedback:", err))
-    // } catch (error) {
-    //   console.error("Error sending feedback:", error)
-    // }
+  const sendFeedback = async ({ user_message, bot_reply, helpful, intent_tag }) => {
+    try {
+      await fetch("http://localhost:5000/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          user_message,
+          bot_reply,
+          helpful,
+          intent_tag
+        }),
+      })
+      console.log("Feedback sent successfully")
+    } catch (error) {
+      console.error("Error sending feedback:", error)
+    }
   }
+  
 
   const sendMessage = async () => {
     if (!input.trim() || !chatBodyRef.current) return
-
+  
     const userMessage = input.trim()
     appendMessage("You", userMessage)
     setInput("")
     appendMessage("Bot", "Typing...", true)
-
+  
     try {
-      const res = await fetch("http://192.168.8.105:5000/chat", {
+      const res = await fetch("http://localhost:5000/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: userMessage }),
       })
-
+  
       if (!res.ok) {
         throw new Error(`Server responded with status: ${res.status}`)
       }
-
+  
       const data = await res.json()
-
-      // Remove the typing message
+      const botResponse = data.bot || "I don't understand..."
+      const predictedIntent = data.tag || "unknown"
+  
+      // Remove typing message
       if (chatBodyRef.current) {
         const lastMsg = chatBodyRef.current.lastChild
         if (lastMsg && lastMsg instanceof HTMLElement && lastMsg.innerHTML.includes("Typing...")) {
           lastMsg.remove()
         }
       }
-
-      // The backend always returns {bot: "response"} format
-      addFeedbackButtons(data.bot || "I don't understand...")
+  
+      // 👇 Pass all info to feedback buttons
+      addFeedbackButtons(userMessage, botResponse, predictedIntent)
+  
     } catch (err) {
       console.error("Error connecting to server:", err)
-
-      // Remove the typing message
+  
       if (chatBodyRef.current) {
         const lastMsg = chatBodyRef.current.lastChild
         if (lastMsg && lastMsg instanceof HTMLElement && lastMsg.innerHTML.includes("Typing...")) {
           lastMsg.remove()
         }
       }
-
+  
       appendMessage("Bot", "Error connecting to server. Please try again later.", true)
     }
   }
+  
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
@@ -128,7 +147,7 @@ export default function ChatBot() {
       if (chatBodyRef.current && !chatBodyRef.current.hasChildNodes()) {
         appendMessage(
           "Bot",
-          "Hello! I'm Sirimal, your travel assistant. How can I help you plan your trip to  Sri Lanka?",
+          "Hello! I'm SL Travel Assist Bot, your travel assistant. How can I help you plan your trip to  Sri Lanka?",
           true,
         )
       }
