@@ -68,7 +68,7 @@ export default function ChatBot() {
 
   const sendFeedback = async ({ user_message, bot_reply, helpful, intent_tag }) => {
     try {
-      await fetch("http://localhost:5000/feedback", {
+      await fetch("api-travel.duckdns.org/feedback", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -94,7 +94,7 @@ export default function ChatBot() {
     appendMessage("Bot", "Typing...", true)
   
     try {
-      const res = await fetch("http://localhost:5000/chat", {
+      const res = await fetch("api-travel.duckdns.org/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: userMessage }),
