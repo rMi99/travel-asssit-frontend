@@ -1,9 +1,9 @@
 ### **1. Product Description**
 
 This AI Travel Assistant is created to help users with planning trips by answering questions on destinations, booking, and tourism matters through natural language. You can use the bot on a website and its responses like a human using natural language processing (NLP). Every time the assistant is used, it collects and processes new knowledge from a travel database and adjusts its knowledge accordingly.
-
+---
 * **GitHub Repositories:**
-  • **Frontend** – [https://github.com/rMi99/travel-asssit-frontend](https://github.com/rMi99/travel-asssit-frontend)
+  • **Frontend** – [Frontend](https://github.com/rMi99/travel-asssit-frontend)
   • **Backend** – *[Backend](https://github.com/prabath1998/sl-travel-assist)*
 
 ---
